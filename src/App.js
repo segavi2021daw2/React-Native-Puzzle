@@ -3,7 +3,7 @@ import Board from "./Board";
 import { updateURLParameter } from "./helpers";
 import React from 'react';
 
-
+import {Timer} from "./timer";
 
 
 export default function App() {
@@ -27,7 +27,7 @@ export default function App() {
     <h1 id="title">Puzzle Game!</h1>
     <Board imgUrl={imgUrl} />
     <input id="input"value={imgUrl} onChange={handleImageChange} />
-
+<Timer></Timer>
   </div>
 
 

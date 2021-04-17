@@ -2,7 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-
+import {Ayuda} from "./Ayuda";
+import {M09_Sqlite} from "./sqlite";
+import {Timer} from "./timer";
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,17 +20,17 @@ ReactDOM.render(
 
  
     <Router>
-      <div>
+      <div >
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link id="buttons1" to="/">Ir al juego</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link  id="buttons2" to="/Ayudaa">Ayuda</Link>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <Link  id="buttons3" to="/Puntuaciones">Puntuaciones</Link>
             </li>
           </ul>
         </nav>
@@ -36,11 +38,11 @@ ReactDOM.render(
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/about">
-            <About />
+          <Route path="/Ayudaa">
+            <Ayuda />
           </Route>
-          <Route path="/users">
-            <Users />
+          <Route path="/Puntuaciones">
+            <Puntuaciones />
           </Route>
           <Route path="/">
             <Home />
@@ -55,22 +57,15 @@ ReactDOM.render(
 
 function Home() {
   return <App></App>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
-}
-
-/*
-ReactDOM.render(
   
-  <React.StrictMode>
-  <M06_Home></M06_Home>
+}
 
-  </React.StrictMode>,
-  document.getElementById("root")
-);*/
+function Ayudaa() {
+  return <Ayuda></Ayuda>;
+}
+
+function Puntuaciones() {
+  return <M09_Sqlite></M09_Sqlite>;
+}
+
+

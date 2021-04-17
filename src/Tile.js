@@ -16,7 +16,7 @@ function Tile(props) {
     backgroundImage: `url(${imgUrl})`,
     backgroundSize: `${BOARD_SIZE * 1.25}px`,
     backgroundPosition: `${(100 / GRID_SIZE) * (tile % GRID_SIZE)}% ${(100 / GRID_SIZE) * (Math.floor(tile / GRID_SIZE))}%`,
-
+ 
   };
   const motionStyle = {
     translateX: spring(visualPos.x),
